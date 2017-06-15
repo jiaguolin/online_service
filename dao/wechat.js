@@ -32,7 +32,7 @@ module.exports={
 
 		var touser = req.body['touser']
 		var conten = req.body['content']
-		wechatApi.customReply('oyrpDv1_AeyU-Fd89VRKFJa-WehM',conten).then(function(data){
+		wechatApi.customReply(touser,conten).then(function(data){
 			res.json({code:200,info:'发送成功'});
 			res.end();
 		})
